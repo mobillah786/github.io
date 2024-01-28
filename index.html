@@ -22,6 +22,20 @@
             text-align: center; /* Centered text for all header elements */
             z-index: 10;
         }
+        
+        .image-section {
+        margin-top: 60px; /* Adjust the top margin to push the image section down */
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                padding: 0.5em; /* Reduce padding on smaller screens */
+            }
+
+            .image-section {
+                margin-top: 100px; /* Increase top margin for mobile */
+            }
+        }
 
         header h1, header p {
             margin: 0.5em 0; /* Uniform margin for header elements */
