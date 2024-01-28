@@ -30,12 +30,14 @@
             text-align: center;
         }
 
-        #Firstname, #Lastname {
+        #Firstname,
+        #Lastname {
             color: rgb(255, 255, 255);
             transition: font-size 0.3s ease-in-out;
         }
 
-        #Firstname:hover, #Lastname:hover {
+        #Firstname:hover,
+        #Lastname:hover {
             font-size: 110%;
         }
 
@@ -116,27 +118,29 @@
             z-index: 1000;
         }
 
-        @media (max-width: 600px) {
+        @media (min-width: 601px) {
             header {
-                flex-direction: column;
-                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;
             }
 
             .nav ul {
-                justify-content: center;
-                margin-top: 1em;
+                justify-content: flex-end;
+                margin-top: 0;
             }
 
             .image-section {
-                height: 50vh;
+                height: 100vh;
             }
 
             .overlay {
-                font-size: 20px;
+                font-size: 20px; /* Adjusted back to the original size for larger screens */
             }
 
             #para {
-                font-size: 30px;
+                font-size: 30px; /* Adjusted back to the original size for larger screens */
             }
 
             section {
