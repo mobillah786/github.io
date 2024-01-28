@@ -32,6 +32,9 @@
         }
 
         @media screen and (max-width: 600px) {
+            max-width: 100%;
+            overflow-x: hidden;
+            
             header {
                 padding: 0.5em; /* Reduce padding on smaller screens */
             }
@@ -44,6 +47,10 @@
         }
 
         @media screen and (orientation: landscape) and (max-height: 600px) {
+
+            max-width: 100%;
+            overflow-x: hidden;
+
             header {
                 padding: 0.3em; /* Reduce padding for landscape orientation */
                 font-size: 80%; /* Adjust font size for smaller headers */
