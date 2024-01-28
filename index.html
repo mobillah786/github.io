@@ -39,6 +39,36 @@
             }
         }
 
+        @media screen and (orientation: landscape) and (max-height: 600px) {
+            header {
+                padding: 0.3em; /* Reduce padding for landscape orientation */
+                font-size: 80%; /* Adjust font size for smaller headers */
+            }
+
+            .image-section {
+                margin-top: 80px; /* Adjust top margin for landscape orientation */
+                height: 30vh; /* Reduce height in landscape mode */
+            }
+
+            .nav ul {
+                flex-direction: row; /* Keep navigation horizontal */
+                justify-content: space-around; /* Distribute space evenly */
+            }
+
+            .nav a {
+                margin: 0 5px; /* Adjust margin for nav items */
+            }
+
+            section {
+                margin-top: 40px; /* Adjust top margin for sections */
+                padding: 0.5em; /* Reduce padding */
+            }
+
+            footer {
+                position: relative; /* Adjust footer position */
+            }
+        }
+
         header h1, header p {
             margin: 0.5em 0; /* Uniform margin for header elements */
         }
