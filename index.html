@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad's Personal Site</title>
     <style>
         @font-face {
@@ -15,6 +16,7 @@
             margin: 0;
             padding: 0;
             background-color: #000000;
+            color: #ffffff;
         }
 
         header {
@@ -23,18 +25,15 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            display: flex;
-            flex-direction: column; /* Adjusted for better mobile display */
-            align-items: center; /* Adjusted for better mobile display */
-            background-color: rgba(1, 1, 1, 0.622);
+            background-color: rgba(1, 1, 1, 0.8);
             padding: 1em;
+            text-align: center;
         }
 
         #Firstname,
         #Lastname {
             color: rgb(255, 255, 255);
             transition: font-size 0.3s ease-in-out;
-            text-align: center; /* Adjusted for better mobile display */
         }
 
         #Firstname:hover,
@@ -43,21 +42,21 @@
         }
 
         #subheading {
-            margin-top: 0.5em; /* Adjusted for better mobile display */
-            color: #ffffff;
+            margin-top: 0.5em;
             text-align: center;
         }
 
         .nav ul {
             list-style-type: none;
+            padding: 0;
+            margin: 0;
             display: flex;
             justify-content: center;
-            padding: 0;
             margin-top: 1em;
         }
 
         .nav li {
-            color: #ffffff;
+            margin: 0;
             margin-right: 20px;
         }
 
@@ -75,10 +74,10 @@
 
         .overlay {
             position: absolute;
-            top: 0;
+            top: 50%; /* Center the overlay vertically */
             left: 0;
             width: 100%;
-            height: 100%;
+            transform: translateY(-50%);
             background: rgba(0, 0, 0, 0.5);
             display: flex;
             flex-direction: column;
@@ -88,11 +87,12 @@
             text-align: center;
             font-size: 20px;
         }
-        
+
         #para {
             color: #03e0f9;
-            text-align: center;            
+            text-align: center;
             font-size: 30px;
+            margin-top: 0.5em;
         }
 
         .overlay h1,
@@ -105,6 +105,9 @@
             padding: 1em;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         footer {
@@ -112,40 +115,21 @@
             color: white;
             text-align: center;
             padding: 1em;
-            position: flex;
-            bottom: 0;
             width: 100%;
             z-index: 1000;
         }
 
         @media (min-width: 601px) {
             header {
-<<<<<<< HEAD
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 text-align: left;
-=======
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1em 8em;
->>>>>>> ade73ce2d65bc50840f1e58d586cab1940fd5a67
-            }
-
-            #subheading {
-                margin-top: 0;
             }
 
             .nav ul {
-<<<<<<< HEAD
                 justify-content: flex-end;
                 margin-top: 0;
-=======
-                justify-content: flex-end;
-                margin-top: 0;
-                margin-right: 200px;
->>>>>>> ade73ce2d65bc50840f1e58d586cab1940fd5a67
             }
 
             .image-section {
@@ -153,30 +137,20 @@
             }
 
             .overlay {
-<<<<<<< HEAD
                 font-size: 20px; /* Adjusted back to the original size for larger screens */
-=======
-                font-size: 30px;
->>>>>>> ade73ce2d65bc50840f1e58d586cab1940fd5a67
             }
 
             #para {
-<<<<<<< HEAD
                 font-size: 30px; /* Adjusted back to the original size for larger screens */
-=======
-                font-size: 100px;
->>>>>>> ade73ce2d65bc50840f1e58d586cab1940fd5a67
             }
 
             section {
-                margin-top: 7em;
-                max-width: 800px;
-                margin-left: auto;
-                margin-right: auto;
+                margin-top: 2em;
             }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -193,13 +167,12 @@
             </ul>
         </div>
     </header>
-    
 
     <div class="image-section">
         <img src="./Public/mountain.gif" alt="Image Description">
         <div class="overlay">
             <p>Create, explore, expand</p>
-            <p id ="para"> <strong> CONQUER </strong></p>
+            <p id="para"> <strong> CONQUER </strong></p>
         </div>
     </div>
 
@@ -208,7 +181,7 @@
         <p>
             Welcome to <strong> the construction of </strong> my personal website! I am a passionate marketer with a strong
             background in creating dynamic and creative marketing projects. My goal is to make aesthetic marketing content
-            for impactful companies and organizations. 
+            for impactful companies and organizations.
         </p>
     </section>
 
@@ -233,4 +206,5 @@
     </footer>
 
 </body>
+
 </html>
