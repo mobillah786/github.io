@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,10 +85,10 @@
             text-align: center;
             font-size: 20px;
         }
-        
+
         #para {
             color: #03e0f9;
-            text-align: center;            
+            text-align: center;
             font-size: 30px;
         }
 
@@ -115,37 +116,36 @@
             z-index: 1000;
         }
 
-        @media (min-width: 601px) {
+        @media (max-width: 600px) {
             header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                text-align: left;
+                flex-direction: column;
+                text-align: center;
             }
 
             .nav ul {
-                justify-content: flex-end;
-                margin-top: 0;
+                justify-content: center;
+                margin-top: 1em;
             }
 
             .image-section {
-                height: 100vh;
+                height: 50vh;
             }
 
             .overlay {
-                font-size: 30px;
+                font-size: 20px;
             }
 
             #para {
-                font-size: 100px;
+                font-size: 30px;
             }
 
             section {
-                margin-top: 7em;
+                margin-top: 2em;
             }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -162,12 +162,12 @@
             </ul>
         </div>
     </header>
-    
+
     <div class="image-section">
         <img src="./Public/mountain.gif" alt="Image Description">
         <div class="overlay">
             <p>Create, explore, expand</p>
-            <p id ="para"> <strong> CONQUER </strong></p>
+            <p id="para"> <strong> CONQUER </strong></p>
         </div>
     </div>
 
@@ -176,7 +176,7 @@
         <p>
             Welcome to <strong> the construction of </strong> my personal website! I am a passionate marketer with a strong
             background in creating dynamic and creative marketing projects. My goal is to make aesthetic marketing content
-            for impactful companies and organizations. 
+            for impactful companies and organizations.
         </p>
     </section>
 
@@ -201,4 +201,5 @@
     </footer>
 
 </body>
+
 </html>
