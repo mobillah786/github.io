@@ -283,12 +283,13 @@
             background-image: url(./Public/IMG_0350.jpg); /* Replace with your image path */
             background-size: cover; /* Cover the entire area */
             background-position: left; /* Center the image */
-            background-attachment: fixed; /* Optional: creates a parallax effect */
+            background-attachment: fixed; /* Creates a parallax effect on non-mobile devices */
         }
 
-        section {
-            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
-            /* Rest of your section styles */
+        @media screen and (max-width: 600px) {
+            .background-image-overlay {
+                background-attachment: scroll; /* Change to scroll for mobile devices */
+            }
         }
 
 
