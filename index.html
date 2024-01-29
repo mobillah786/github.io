@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:bold' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mohammad's Personal Site</title>
+    <style>
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            background-color: #000;
+            color: #fff; /* Default text color */
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+
+
+        p, li, a, /* other text elements */ {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(1, 1, 1, 0.622);
+            padding: 1em;
+            text-align: center; /* Centered text for all header elements */
+            z-index: 10;
+        }
+        
+        .image-section {
+        margin-top: 0%; /* Adjust the top margin to push the image section down */
+        }
+
+        section {
+            padding: 1em;
+            background-color: #fff;
+            color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 1em auto;
+            max-width: 800px;
+            border-radius: 10px; 
+        }
+
+        .work-in-progress .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-wrap: wrap;
+        }
+
+        .image-block, .text-block {
+            flex: 1;
+            margin: 10px;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+
+        .image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            align-items: center;
+        }
+
+        ul li {
+            background-color: #a5a0a0;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+
+        .work-in-progress {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .content {
+            text-align: left;
+            margin-top: 0;
+            font-size: px;
+        }
+
+        .section-title {
+            margin: 0px 0px 0px 0px;
+            margin-bottom: 0px;
+            color: #000;
+        }
+
+
+
+        .content-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap; /* Allows content to stack on smaller screens */
+        }
+
+        .image-block, .text-block {
+            flex: 1; /* Each block takes equal width */
+            margin: 0px -10px 0px 0px;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+
+        .image-block img {
+            max-width: 100%; /* Ensures image scales down */
+            height: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            .image-block, .text-block {
+                width: 100%; /* Full width for smaller screens */
+                flex-basis: auto; /* Override flex property for stacking */
+            }
+        }
+
+
+        @media screen and (max-width: 600px) {
+            max-width: 100%;
+            overflow-x: hidden;
+            
+            html,body {
+                width: 100%;
+                height: 100%;
+                margin-right: 0px;
+                padding: 0px;
+                overflow-x: hidden; 
+            }
+
+            header {
+                padding: 0.5em; /* Reduce padding on smaller screens */
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .image-section {
+                margin-top: 200px; /* Increase top margin for mobile */
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 600px) {
+
+            header {
+                padding: 0.3em; /* Reduce padding for landscape orientation */
+                font-size: 80%; /* Adjust font size for smaller headers */
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .image-section {
+                margin-top: 100px; /* Adjust top margin for landscape orientation */
+                height: 50vh; /* Reduce height in landscape mode */
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            .nav ul {
+                flex-direction: row; /* Keep navigation horizontal */
+                justify-content: space-around; /* Distribute space evenly */
+            }
+
+            .nav a {
+                margin: 0 5px; /* Adjust margin for nav items */
+            }
+
+            section {
+                margin-top: 40px; /* Adjust top margin for sections */
+                padding: 0.5em; /* Reduce padding */
+            }
+
+            footer {
+                position: relative; /* Adjust footer position */
+                margin-right: 0px;
+            }
+        }
+
+        header h1, header p {
+            margin: 0.5em 0; /* Uniform margin for header elements */
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px; /* Uniform spacing for nav items */
+        }
+
+        .image-section {
+            position: relative;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 5;
+        }
+
+        #grow {
+            height: 0%;
+            font-size: 60px;
+            color: aqua;
+        }
+
+        section {
+            padding: 1em;
+            background-color: #fff;
+            color: #000; /* Text color for sections */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 60px; /* Adjusted margin */
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 1em;
+            position: flex;
+            bottom: 0;
+            width: cover;
+        }
+
+        @media (min-width: 601px) {
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1em 8em;
+            }
+
+            .nav ul {
+                margin-right: 200px;
+            }
+
+            .image-section {
+                height: 100vh;
+            }
+        }
+
+        #skills ul li {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .background-image-overlay {
+            position: relative;
+            background-image: url(./Public/IMG_0350.jpg); /* Replace with your image path */
+            background-size: cover; /* Cover the entire area */
+            background-position: left; /* Center the image */
+            background-attachment: fixed; /* Optional: creates a parallax effect */
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+            /* Rest of your section styles */
+        }
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const skills = document.querySelectorAll('#skills ul li');
+                let delay = 0;
+                skills.forEach(skill => {
+                    setTimeout(() => {
+                        skill.style.opacity = '1';
+                        skill.style.transform = 'translateX(0)';
+                    }, delay);
+                    delay += 300;
+                });
+            });
+        </script>
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>MOHAMMAD BILLAH</h1>
+            <p>Aspiring Marketer</p>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./Pages/about.html">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="image-section">
+        <img src="./Public/mountain.gif" alt="Mountain">
+        <div class="overlay">
+            <p>Create, explore, expand</p>
+            <p><strong id="grow">CONQUER</strong></p>
+        </div>
+    </div>
+
+
+
+    <div class="background-image-overlay">    
+        <!-- STILL A WORK IN PROGRESS Section -->
+        <section>
+            <h2>STILL A WORK IN PROGRESS</h2>
+            <p>
+                Welcome to <strong> the construction of </strong> my personal website! I am a passionate marketer with a strong
+                background in creating dynamic and creative marketing projects. My goal is to make aesthetic marketing content
+                for impactful companies and organizations. 
+            </p>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="work-in-progress">
+            <h2 class="section-title">ABOUT ME</h2>
+            <div class="content-wrapper">
+                <div class="image-block">
+                    <img src="./Public/Suit and Tie.jpg" alt="Mohammad Billah">
+                </div>
+                <div class="text-block">
+                    <!-- Your about me content here -->
+                    <p class="content">
+                        Hello! I'm <strong> Mohammad Billah </strong>, an enthusiastic MBA student with a vibrant blend of design, content generation, and program management experience.<br /> <br /> <br /> 
+                        My journey in the world of business started with a passion for creating impactful designs and compelling content. This passion led me to pursue a career where creativity meets strategy. Throughout my MBA, I have honed my skills in both traditional and digital marketing, learning how to craft messages that resonate and designs that captivate. <br /> <br /> <br /> 
+                        Beyond the realm of marketing, I've delved into program management, where I've learned to juggle multiple projects seamlessly, ensuring each one aligns with overarching business goals. My experience in this area has taught me the importance of strategic planning, effective communication, and meticulous execution. <br /> <br /> <br />
+                        I believe that the unique combination of my design sensibility, content creation skills, and program management expertise sets me apart in the fast-paced and ever-evolving business world. I'm excited to bring this unique blend of talents to my future endeavors and continue to grow both professionally and personally. <br /> <br /> <br />
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    <!--   
+        <section class="work-in-progress">
+            <h2 class="section-title">About Me</h2>
+            <div class="content-wrapper">
+                <div class="image-block">
+                    <img src="./Public/Suit and Tie.jpg" alt="Your Name">
+                </div>
+                <div class="text-block">
+                    <p class="content">
+                        Hello! I'm <strong> Mohammad Billah </strong>, an enthusiastic MBA student with a vibrant blend of design, content generation, and program management experience.<br /> <br /> <br /> 
+                        My journey in the world of business started with a passion for creating impactful designs and compelling content. This passion led me to pursue a career where creativity meets strategy. Throughout my MBA, I have honed my skills in both traditional and digital marketing, learning how to craft messages that resonate and designs that captivate. <br /> <br /> <br /> 
+                        Beyond the realm of marketing, I've delved into program management, where I've learned to juggle multiple projects seamlessly, ensuring each one aligns with overarching business goals. My experience in this area has taught me the importance of strategic planning, effective communication, and meticulous execution. <br /> <br /> <br />
+                        I believe that the unique combination of my design sensibility, content creation skills, and program management expertise sets me apart in the fast-paced and ever-evolving business world. I'm excited to bring this unique blend of talents to my future endeavors and continue to grow both professionally and personally. <br /> <br /> <br />
+                    </p>
+                    <!-- Add more content as needed 
+                </div>
+            </div>
+        </section>
+    -->  
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Marketing</li>
+                <li>Data Analysis</li>
+                <li>Microsoft Office Suite</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Email: mobillah@schulich.yorku.ca</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammadbillah/" target="_blank">https://www.linkedin.com/in/mohammadbillah/</a></p>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2024 Mohammad Billah
+    </footer>
+
+</body>
+</html>
